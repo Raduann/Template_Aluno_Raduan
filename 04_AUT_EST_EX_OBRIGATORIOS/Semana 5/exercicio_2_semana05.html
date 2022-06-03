@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2</title>
+</head>
+<body>
+    <header>
+        <div>
+            Qual o valor?
+                <input type="number" name="preco" id="preco">
+                <input type="button" value="Resolver" onclick="funcao()">
+        </div>
+        <div id="resultado">Resultado</div>
+    </header>
+    <script>
+        function funcao(){
+            var resposta = document.querySelector('div#resultado')
+            var v = Number(document.getElementById('preco').value);
+            var l = 0
+            var um = 0
+            var dois = 0
+            var cinco = 0
+            var dez = 0
+            var vinte = 0
+            var cinquenta = 0
+            var cem = 0
+            var lista = [100, 50, 20, 10, 5, 2, 1]
+            while(v != 0){
+                if (v >= Number(lista[l])){
+                    v -= Number(lista[l])
+                    if (l == 0){cem += 1}
+                    if (l == 1){cinquenta += 1}
+                    if (l == 2){vinte += 1}
+                    if (l == 3){dez += 1}
+                    if (l == 4){cinco += 1}
+                    if (l == 5){dois += 1}
+                    if (l == 6){um += 1}}
+                else {l += 1}
+            }
+                resposta.innerHTML = "Será necessário:"  + '<br>' + cem + " notas de 100, " + '<br>' + cinquenta + " notas de 50, " + '<br>' + vinte + " notas de 20, " + '<br>' + dez + " notas de 10, " + '<br>' + cinco + " notas de 5, " + '<br>' + dois +" notas de 2, " + '<br>' + um  +" notas de 1"
+        }
+    </script>
+</body>
+</html>

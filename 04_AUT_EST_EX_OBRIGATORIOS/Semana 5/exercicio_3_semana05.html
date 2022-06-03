@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lista dos números
+    <input type="text" id="numeros">
+    <br>
+    Valor-Foco
+    <input type="text" id="foco">
+    <br>
+    <input type="button" id="calcular" value="calcular" onclick="ordenar()">
+
+    <div id="valor">resultado</div>
+
+
+    <script>
+        function ordenar(){
+            var text = document.getElementById("numeros").value
+            var lista = text.split(',')
+            var foco = document.getElementById("foco").value
+
+            lista.sort((a,b)=>a-b);
+            var resultado = lista.indexOf(foco) + 1;
+            
+            document.getElementById("valor").innerHTML = ` Sendo o valor foco ${foco}, a sua posição ao ordenar a lista será ${resultado}º`
+           
+            console.log(resultado)
+            console.log(lista)
+            console.log(foco)
+        }
+    </script>
+</body>
+</html>

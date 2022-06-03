@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="numero1">
+    <input type="text" id="numero2">
+    <br>
+    <input type="button" id="soma" value="+" onclick="somar()">
+    <br>
+    <input type="button" id="subtração" value="-" onclick="subtrair()">
+    <br>
+    <input type="button" id="multiplicação" value="*" onclick="multiplicar()">
+    <br>
+    <input type="button" id="divisão" value="/" onclick="dividir()">
+    <br>
+    <input type="button" id="numero1" value="//" onclick="dividirInt()">
+    <br>
+    <input type="button" id="numero1" value="%" onclick="resto()">
+    <div id="resultado">Resultado</div>
+    
+    <script>
+
+    function somar(){
+        var nm1 = Number(document.getElementById("numero1").value)
+        var nm2 = Number(document.getElementById("numero2").value)
+        var resul = nm1 + nm2
+        document.getElementById('resultado').innerHTML = `${resul}`
+    }
+
+    function subtrair(){
+        var nm1 = Number(document.getElementById("numero1").value)
+        var nm2 = Number(document.getElementById("numero2").value)
+        var resul = nm1 - nm2
+        document.getElementById('resultado').innerHTML = `${resul}`
+    }
+
+    function multiplicar(){
+        var nm1 = Number(document.getElementById("numero1").value)
+        var nm2 = Number(document.getElementById("numero2").value)
+        var resul = nm1 * nm2
+        document.getElementById('resultado').innerHTML = `${resul}`
+    }
+
+    function dividir(){
+        var nm1 = Number(document.getElementById("numero1").value)
+        var nm2 = Number(document.getElementById("numero2").value)
+        var resul = nm1 / nm2
+        document.getElementById('resultado').innerHTML = `${resul}`
+    }
+
+    function dividirInt(){
+        var nm1 = Number(document.getElementById("numero1").value)
+        var nm2 = Number(document.getElementById("numero2").value)
+        var resul = Math.round(nm1 / nm2)
+        document.getElementById('resultado').innerHTML = `${resul}`
+    }
+
+    function resto(){
+        var nm1 = Number(document.getElementById("numero1").value)
+        var nm2 = Number(document.getElementById("numero2").value)
+        var resul = nm1 % nm2
+        document.getElementById('resultado').innerHTML = `${resul}`
+    }
+
+    </script>
+</body>
+</html>

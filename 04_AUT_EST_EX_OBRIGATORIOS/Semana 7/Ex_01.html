@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h>Coloque a quantidade do produto</h>
+        <input type="number" id="numero">    
+        </div>
+        <br>
+        <input type="button" value="Retirar" onclick="retirar()">
+        <input type="button" value="Adicionar" onclick="adicionar()">
+
+    <script>
+
+        function retirar(){
+            var x = Number (document.getElementById("numero").value);
+
+            x = x - 1
+            document.getElementById("numero").value = String(x)
+        }
+
+        function adicionar(){
+            var x = Number (document.getElementById("numero").value);
+
+            x = x + 1
+            document.getElementById("numero").value = String(x)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de pessoas: 
+    <input type="number" id="quantidade">
+    <br>
+    <input type="button" onclick="diurno()" value="diurno">
+    <input type="button" onclick="noturno()" value="noturno">
+    <div id="resultado">Quantidade de voos</div>
+
+    <script>
+        function diurno(){
+            var pessoas = document.getElementById("quantidade").value
+            var preco = pessoas * 200
+            var desconto = 0
+            if(pessoas > 50){
+                desconto = preco * 0.60
+                //document.getElementById("resultado").value = 'Preço final será de R$'${desconto}''
+                resultado.innerHTML += `<p>${desconto}</p>`
+                console.log(desconto);
+            }
+            else{
+                resultado.innerHTML += `<p>${preco}</p>`
+                //document.getElementById("resultado").value = preco
+                console.log(preco);
+            }
+        }
+
+        function noturno(){
+            var pessoas = document.getElementById("quantidade").value
+            var preco = pessoas * 100
+            var desconto = 0
+            if(pessoas > 50){
+                desconto = preco * 0.80
+                resultado.innerHTML += `<p>${desconto}</p>`
+                console.log(desconto);
+            }
+            else{
+                resultado.innerHTML += `<p>${preco}</p>`
+                console.log(preco);
+            }
+        }
+    </script>
+</body>
+</html>

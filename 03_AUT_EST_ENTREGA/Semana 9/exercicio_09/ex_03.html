@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nome1">
+    <input type="text" id="nome2">
+    <input type="text" id="nome3">
+
+    <input type="button" value="ordenar" onclick="calcular()">
+
+    <div id="resposta"></div>
+
+
+
+    <script>
+
+        function calcular(){
+        var nome1 = document.getElementById("nome1").value
+        var nome2 = document.getElementById("nome2").value
+        var nome3 = document.getElementById("nome3").value
+        
+        var lista = []
+        
+        lista.push=(nome1, nome2, nome3)
+        
+        lista.sort()
+
+
+        resposta.innerHTML = `${lista[0], lista[1], lista[2]}`
+        
+        }
+
+    </script>
+</body>
+</html>

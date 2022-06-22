@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o número
+    <input type="number" id="numero">
+    <br>
+    <input type="button"  value="calcular" onclick="calcular()">
+
+    <p id="resposta"></p>
+
+
+    <script>
+
+        function calcular(){
+
+
+            var numero = document.getElementById("numero").value;
+            var x = 1;
+            var y = 0;
+            var z = 1;
+            var fibonacci = [];
+                
+                for (let i = 0; i < numero; i++){
+                    fibonacci += x + ", ";
+                    y = x + z;
+                    x = z;
+                    z = y;
+                }
+                resposta.innerHTML = "Fibonacci =" + fibonacci;
+
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

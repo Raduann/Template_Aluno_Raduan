@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Coloque aqui o número
+    <input type="number" id="valor">
+    <br>
+    <input type="button" onclick="funcao()" value="calcular">
+
+
+    <script>
+
+
+        function funcao(){
+        var x = document.getElementById("valor").value
+        var caracteres = x.length;
+        var numero = x.split("");
+        var soma = 0;
+
+        for(i=0; i < caracteres; i++){
+            soma += Number(numero[i])
+        }
+        console.log(soma)
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>[Ex. 4 | Sem. 9]</title>
+    </head>
+    <body>
+
+    <h1>Exercício 4 - Semana 9</h1>
+
+    <p>A série de Fibonacci é formada pela sequência 
+        1, 1, 2, 3, 5, 8, 13, 21, 34, ... Escreva 
+        um programa que apresente a série de Fibonacci 
+        até o n-ésimo termo (n > 0).</p>
+
+        <label for="fname">Digite até qual n-ésimo termo você gostaria de apreciar a Sequência de Fibonacci: </label>
+        <input type="text" id="input-numero" name="fname">
+        <button onclick="apresentaFibonacci()">Gerar Série de Fibonacci</button>
+
+        <p id="resultado"></p>
+
+        <script type="text/javascript">
+
+            function apresentaFibonacci(){
+                
+                let n_esimo = document.getElementById("input-numero").value;
+                var termo_atual = 1;
+                var proximo_termo = 0;
+                var termo_anterior = 1;
+                var serie_fibonacci = [];
+
+                for (let i = 0; i < n_esimo; i++){
+                    serie_fibonacci += termo_atual + ", ";
+                    proximo_termo = termo_atual + termo_anterior;
+                    termo_atual = termo_anterior;
+                    termo_anterior = proximo_termo;
+                }
+
+                document.getElementById("resultado").innerHTML = "Série de Fibonacci até o " + n_esimo + "-simo termo: " + serie_fibonacci;
+            
+            };
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>[Ex. 3 | Sem. 9]</title>
+    </head>
+    <body>
+
+    <h1>Exercício 3 - Semana 9</h1>
+
+    <p>Crie uma página web na qual o usuário
+         informe três nomes e quando o usuário
+          indicar que deseja que o cálculo seja
+           realizado (pressionar um botão), os
+            nomes são exibidos em ordem alfabética
+             crescente.</p>
+
+        <label for="fname">Informe o primeiro nome:</label>
+        <input type="text" id="primeiro-nome" name="fname"> <br> <br>
+        <label for="fname">Informe o segundo nome:</label>
+        <input type="text" id="segundo-nome" name="fname"> <br> <br>
+        <label for="fname">Informe o terceiro nome: </label>
+        <input type="text" id="terceiro-nome" name="fname"> <br> <br>
+
+        <button onclick="ordenaNomes()">Ordenar nomes</button>
+
+        <p id="resultado"></p>
+
+        <script type="text/javascript">
+            function ordenaNomes(){
+
+                primeiro_nome = document.getElementById("primeiro-nome").value;
+                segundo_nome = document.getElementById("segundo-nome").value;
+                terceiro_nome = document.getElementById("terceiro-nome").value;
+                
+                nomes_lista = [primeiro_nome, segundo_nome, terceiro_nome];
+                nomes_ordem_alfabetica = nomes_lista.sort()
+
+                document.getElementById("resultado").innerHTML = "Nomes digitados em ordem alfabética: " + nomes_lista;
+
+            };
+
+        </script>
+
+    </body>
+</html>

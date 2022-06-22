@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>[Ex. 2 | Sem. 9]</title>
+    </head>
+    <body>
+
+    <h1>Exercício 2 - Semana 9</h1>
+
+    <p>Crie uma página web na qual o usuário 
+        informe um número inteiro positivo e 
+        quando o usuário indicar que deseja que 
+        o cálculo seja realizado (pressionar um 
+        botão), seja exibida a soma de seus dígitos.</p>
+
+        <label for="fname">Digite um número inteiro e positivo:</label>
+        <input type="text" id="input-numero" name="fname">
+        <button onclick="somaDigitos()">Calcular</button>
+
+        <p id="resultado"></p>
+
+        <script type="text/javascript">
+            function somaDigitos(){
+                var numero = document.getElementById("input-numero").value;
+                var numero_lista  = numero.split("");
+                var soma_digitos = 0;
+
+                for (let i = 0; i < numero_lista.length; i++){
+                    soma_digitos += parseInt(numero_lista[i]);
+                }
+
+                document.getElementById("resultado").innerHTML = "A soma dos dígitos do número digitado é " + soma_digitos + ".";
+
+            };
+
+        </script>
+
+    </body>
+</html>
